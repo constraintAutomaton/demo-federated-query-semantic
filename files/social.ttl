@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/> .
+
+ex:jan a ex:user, ex:student ;
+    ex:age 16 ;
+    ex:email "jan@janmail.com";
+    ex:email "jan@solidmail.com";
+    ex:job "Cashier" .
+
+ex:josette a ex:user, ex:student ;
+    ex:age 25 ;
+    ex:email "josette@personalMail.com";
+    ex:job "Painter" .
+
+ex:jos a ex:user, ex:student ;
+    ex:age 30;
+    ex:hobby "Biking".

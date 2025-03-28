@@ -1,0 +1,4 @@
+@prefix ex: <http://example.org/> .
+
+ex:jan ex:id 1.
+ex:josette ex:id 2. 

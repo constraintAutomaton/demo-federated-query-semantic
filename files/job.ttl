@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/> .
+
+ex:jan a ex:student ;
+    ex:age 16 ;
+    ex:job "Cashier" .
+
+ex:josette a ex:student ;
+    ex:age 25 ;
+    ex:job "Cook" ;
+    ex:job "Painter" .
+
+ex:jos a ex:worker ;
+    ex:age 30;
+    ex:job "Engineer".
