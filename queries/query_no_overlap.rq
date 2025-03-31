@@ -1,0 +1,13 @@
+PREFIX ex: <http://example.org/>
+
+SELECT * WHERE  {
+  SERVICE <http://localhost:3001/sparql> {
+    ?s ex:employer ?employer.
+  }
+
+  SERVICE <http://localhost:3000/sparql> {
+    ?s ex:email ?email.
+  }
+  
+  ?s ex:id ?id.
+}
