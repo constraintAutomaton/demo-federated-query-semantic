@@ -2,12 +2,14 @@ PREFIX ex: <http://example.org/>
 
 SELECT * WHERE  {
   SERVICE <http://localhost:3001/sparql> {
-    ex:jan !a ?o.
+    ?s ex:baan ?job.
   }
 
   SERVICE <http://localhost:3000/sparql> {
-    ex:jan !ex:job ?o.
+    ?s ex:job ?job;
+      ex:age ?age ;
+      ex:email ?email.
   }
   
-  ex:jan ex:id ?id.
+  ?s ex:id ?id.
 }

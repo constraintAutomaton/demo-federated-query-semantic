@@ -3,5 +3,6 @@ PREFIX ex: <http://example.org/>
 SELECT * WHERE  {
   ?s ex:job ?job ;
      ex:age ?age ;
-     ex:email ?email.
+     ex:email ?email;
+     ex:id ?id.
 }

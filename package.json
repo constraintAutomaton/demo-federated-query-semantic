@@ -9,11 +9,15 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@comunica/query-sparql": "^4.1.0",
-    "@comunica/query-sparql-file": "^4.1.0"
+    "@comunica/query-sparql": "^4.1.0"
   },
   "scripts": {
     "start-endpoints-social": "bunx comunica-sparql-file-http ./files/social.ttl -p 3000",
-    "start-endpoints-job": "bunx comunica-sparql-file-http ./files/job.ttl -p 3001"
+    "start-endpoints-job": "bunx comunica-sparql-file-http ./files/job.ttl -p 3001",
+    "start-endpoints-id": "bunx comunica-sparql-file-http ./files/id.ttl -p 3002",
+
+    "start-all-endpoints": "bun run start-endpoints-social & bun run start-endpoints-job & bun run start-endpoints-id",
+
+    "close-ports": "fuser -k 3000/tcp && fuser -k 3001/tcp && fuser -k 3002/tcp"
   }
 }

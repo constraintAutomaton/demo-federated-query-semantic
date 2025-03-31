@@ -2,13 +2,17 @@
 
 ex:jan a ex:student ;
     ex:age 16 ;
-    ex:job "Cashier" .
+    ex:job "Cashier" ;
+    ex:baan "Cashier".
 
 ex:josette a ex:student ;
     ex:age 25 ;
     ex:job "Cook" ;
-    ex:job "Painter" .
+    ex:job "Painter" ;
+    ex:baan "Cook";
+    ex:baan "Cook".
 
 ex:jos a ex:worker ;
     ex:age 30;
-    ex:job "Engineer".
+    ex:job "Engineer";
+    ex:baan "Engineer".
