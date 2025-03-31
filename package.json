@@ -17,7 +17,9 @@
     "start-endpoints-id": "bunx comunica-sparql-file-http ./files/id.ttl -p 3002",
 
     "start-all-endpoints": "bun run start-endpoints-social & bun run start-endpoints-job & bun run start-endpoints-id",
+    
+    "close-ports": "fuser -k 3000/tcp || fuser -k 3001/tcp || fuser -k 3002/tcp",
 
-    "close-ports": "fuser -k 3000/tcp && fuser -k 3001/tcp && fuser -k 3002/tcp"
+    "demo": "(bun run start-all-endpoints > /dev/null 2>&1) & echo \"wait 10 seconds that the endpoints starts\" && sleep 10s && bun run index.ts && bun run close-ports"
   }
 }
