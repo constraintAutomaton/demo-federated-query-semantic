@@ -1,0 +1,14 @@
+
+SELECT * WHERE  {
+  SERVICE <http://localhost:3000/sparql> {
+    ?s ?p ?o
+  }
+
+  SERVICE <http://localhost:3001/sparql> {
+    ?s ?p ?o
+  }
+
+  SERVICE <http://localhost:3002/sparql> {
+    ?s ?p ?o
+  }
+}
