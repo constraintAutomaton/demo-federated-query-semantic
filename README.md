@@ -111,29 +111,7 @@ The query produce 7 duplicate(s) containing the triples:
 With ESA, conjunctive queries with no projection produce a bag of results.
 
 Press any key ...
-Let's do the same with SERVICE clauses.
-
-
-SELECT * WHERE  {
-  SERVICE <http://localhost:3000/sparql> {
-    ?s ?p ?o
-  }
-
-  SERVICE <http://localhost:3001/sparql> {
-    ?s ?p ?o
-  }
-
-  SERVICE <http://localhost:3002/sparql> {
-    ?s ?p ?o
-  }
-}
-
-Press any key ...
-
-The query produce 0 duplicate(s) containing the triples:
-
-
-With SERVICE clauses, conjunctive queries with no projection produce a set of results.
+With SERVICE clauses it is not possible to express with a conjunctive query this statement.
 
 Press any key ...
 Let's present a realistic example.
@@ -183,17 +161,18 @@ PREFIX ex: <http://example.org/>
 
 SELECT * WHERE  {
   SERVICE <http://localhost:3001/sparql> {
-    ?s ex:job ?job.
+    ?s ex:job ?job;
+        ex:age ?age.
   }
 
   SERVICE <http://localhost:3000/sparql> {
-    ?s ex:job ?job;
-      ex:age ?age ;
+    ?s ex:age ?age ;
       ex:email ?email.
   }
 
   ?s ex:id ?id.
 }
+
 Press any key ...
 
 The query produce 0 duplicate(s) containing the triples:

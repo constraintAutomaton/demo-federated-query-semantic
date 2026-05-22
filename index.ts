@@ -50,15 +50,8 @@ console.log(
 
 await getInput("Press any key ...");
 
-console.log("Let's do the same with SERVICE clauses.\n");
-console.log(allTripleQueryService);
-
-await getInput("Press any key ...");
-
-await queryAndPrintDuplicates(engine, allTripleQueryService, []);
-
 console.log(
-  "With SERVICE clauses, conjunctive queries with no projection produce a set of results.\n",
+  "With SERVICE clauses it is not possible to express with a conjunctive query this statement.\n",
 );
 
 await getInput("Press any key ...");
